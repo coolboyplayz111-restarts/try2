@@ -1,9 +1,6 @@
 import mineflayer from 'mineflayer';
 import { pathfinder, Movements } from 'mineflayer-pathfinder';
-import pvp from 'mineflayer-pvp';
-import autoEat from 'mineflayer-auto-eat';
-import armorManager from 'mineflayer-armor-manager';
-import toolPlugin from 'mineflayer-tool';
+import minecraftData from 'minecraft-data';
 import config from './config.js';
 import logger from './logger.js';
 
@@ -32,41 +29,45 @@ export class BotConnection {
       try {
         this.bot = mineflayer.createBot(options);
 
-        // Load plugins
+        // Load pathfinder plugin immediately
         this.bot.loadPlugin(pathfinder);
-        this.bot.loadPlugin(pvp);
-        this.bot.loadPlugin(autoEat);
-        this.bot.loadPlugin(armorManager);
-        this.bot.loadPlugin(toolPlugin);
 
         // Connection events
         this.bot.once('login', () => {
           logger.info('Bot logged in successfully');
           this.reconnectAttempts = 0;
           this.reconnectDelay = config.reconnection.initialDelay;
+          
+          // Load optional plugins asynchronously after login
+          this.loadOptionalPlugins().catch(e => logger.debug('Plugin loading error', { error: e.message }));
+          
           resolve(this.bot);
         });
 
-        this.bot.on('spawn', () => {
+        this.bot.on('spawn', async () => {
+          if (!this.bot.entity) {
+            logger.debug('Spawn event: entity not ready yet');
+            return;
+          }
+          
           logger.info('Bot spawned', { pos: this.bot.entity.position });
           
-          // Setup auto-eat
-          this.bot.autoEat.enable();
-          
           // Setup pathfinder movements
-          const mcData = require('minecraft-data')(this.bot.version);
+          const mcData = minecraftData(this.bot.version);
           const movements = new Movements(this.bot, mcData);
           this.bot.pathfinder.setMovements(movements);
 
           // Start mineflayer viewer for live 3D view (if available)
           try {
             const viewerPort = (config.dashboard && config.dashboard.port) ? config.dashboard.port + 1 : 3001;
-            const viewerLib = require('mineflayer-viewer');
-            const viewerFn = viewerLib.mineflayerViewer || viewerLib;
-            viewerFn(this.bot, { port: viewerPort, firstPerson: false });
-            logger.info('Viewer started', { port: viewerPort });
+            const viewerLib = await import('mineflayer-viewer');
+            const viewerFn = viewerLib.default || viewerLib.mineflayerViewer;
+            if (viewerFn && this.bot.entity) {
+              viewerFn(this.bot, { port: viewerPort, firstPerson: false });
+              logger.info('Viewer started', { port: viewerPort });
+            }
           } catch (e) {
-            logger.warn('Viewer not available or failed to start', { error: e.message });
+            logger.debug('Viewer not available or failed to start', { error: e.message });
           }
         });
 
@@ -150,6 +151,41 @@ export class BotConnection {
 
   isConnected() {
     return this.bot && this.bot.entity && this.bot.entity.position;
+  }
+
+  async loadOptionalPlugins() {
+    // Attempt to load optional plugins asynchronously
+    try {
+      const pvp = await import('mineflayer-pvp');
+      this.bot.loadPlugin(pvp.default || pvp);
+      logger.debug('PVP plugin loaded');
+    } catch (e) {
+      logger.debug('PVP plugin not available');
+    }
+    
+    try {
+      const autoEat = await import('mineflayer-auto-eat');
+      this.bot.loadPlugin(autoEat.default || autoEat);
+      logger.debug('Auto-eat plugin loaded');
+    } catch (e) {
+      logger.debug('Auto-eat plugin not available');
+    }
+    
+    try {
+      const armorManager = await import('mineflayer-armor-manager');
+      this.bot.loadPlugin(armorManager.default || armorManager);
+      logger.debug('Armor manager plugin loaded');
+    } catch (e) {
+      logger.debug('Armor manager plugin not available');
+    }
+    
+    try {
+      const toolPlugin = await import('mineflayer-tool');
+      this.bot.loadPlugin(toolPlugin.default || toolPlugin);
+      logger.debug('Tool plugin loaded');
+    } catch (e) {
+      logger.debug('Tool plugin not available');
+    }
   }
 }
 
