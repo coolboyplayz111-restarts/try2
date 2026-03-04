@@ -101,6 +101,7 @@
             <div class="chat-input-group">
               <input id="chat-input" type="text" placeholder="Say something..." />
               <button id="send-chat" class="btn-primary">Send</button>
+              <button id="send-ai" class="btn-secondary" title="Send as AI command">AI Action</button>
             </div>
           </section>
 
@@ -207,6 +208,9 @@
               <button class="settings-nav-item" data-section="display">🎨 Display</button>
               <button class="settings-nav-item" data-section="notifications">🔔 Notifications</button>
               <button class="settings-nav-item" data-section="advanced">🔧 Advanced</button>
+              <button class="settings-nav-item" data-section="integrations">🔗 Integrations</button>
+              <button class="settings-nav-item" data-section="backups">💾 Backups</button>
+              <button class="settings-nav-item" data-section="permissions">🛂 Permissions</button>
             </nav>
           </aside>
 
@@ -391,6 +395,49 @@
                 <button id="import-settings" class="btn-secondary">📤 Import</button>
               </div>
             </section>
+
+            <!-- Integrations Settings -->
+            <section id="integrations-section" class="settings-section">
+              <h2>🔗 Integrations</h2>
+              <div class="setting-group">
+                <label>Enable Webhook</label>
+                <input type="checkbox" id="enable-webhook" />
+              </div>
+              <div class="setting-group">
+                <label>Webhook URL</label>
+                <input type="text" id="webhook-url" placeholder="https://example.com/webhook" />
+              </div>
+            </section>
+
+            <!-- Backups Settings -->
+            <section id="backups-section" class="settings-section">
+              <h2>💾 Backups</h2>
+              <div class="setting-group">
+                <label>Enable Backups</label>
+                <input type="checkbox" id="enable-backup" />
+              </div>
+              <div class="setting-group">
+                <label>Backup Interval (seconds)</label>
+                <input type="number" id="backup-interval" value="3600" min="60" />
+              </div>
+              <div class="setting-group">
+                <label>Backup Location</label>
+                <input type="text" id="backup-location" placeholder="/backups" />
+              </div>
+            </section>
+
+            <!-- Permissions Settings -->
+            <section id="permissions-section" class="settings-section">
+              <h2>🛂 Permissions</h2>
+              <div class="setting-group">
+                <label>Allow Remote Commands</label>
+                <input type="checkbox" id="allow-remote-commands" />
+              </div>
+              <div class="setting-group">
+                <label>Admin Users (comma-separated)</label>
+                <input type="text" id="admin-users" placeholder="admin,mod" />
+              </div>
+            </section>
           </div>
         </div>
       </div>
@@ -433,6 +480,7 @@
     </main>
   </div>
 
+  <script src="/socket.io/socket.io.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>

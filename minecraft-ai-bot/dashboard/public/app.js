@@ -13,43 +13,51 @@ let botStatus = { online: false, position: null };
 
 const settingsManager = {
   defaults: {
-    // General
-    botName: 'AIBot',
-    autoSave: true,
-    maxMemory: 10000,
-    autoReconnect: true,
-    maxReconnect: 50,
+    // General (kebab-case IDs must match HTML)
+    'bot-name': 'AIBot',
+    'auto-save': true,
+    'max-memory': 10000,
+    'auto-reconnect': true,
+    'max-reconnect': 50,
     // AI Behavior
-    aggression: 50,
-    caution: 50,
-    exploration: 50,
-    strategy: 'balanced',
-    enableLearning: true,
+    'aggression': 50,
+    'caution': 50,
+    'exploration': 50,
+    'strategy': 'balanced',
+    'enable-learning': true,
     // Survival
-    autoEat: true,
-    minHunger: 10,
-    nightShelter: true,
-    minHealth: 5,
-    combatDiff: 'normal',
+    'auto-eat': true,
+    'min-hunger': 10,
+    'night-shelter': true,
+    'min-health': 5,
+    'combat-diff': 'normal',
     // Display
-    theme: 'dark',
-    accentColor: '#4cc2ff',
-    chatFontSize: 14,
-    showRadar: true,
-    mobileSidebar: true,
-    compactView: false,
+    'theme': 'dark',
+    'accent-color': '#4cc2ff',
+    'chat-font-size': 14,
+    'show-radar': true,
+    'mobile-sidebar': true,
+    'compact-view': false,
     // Notifications
-    notifyChat: true,
-    notifyHealth: true,
-    notifyHunger: true,
-    notifyEnemy: true,
-    notifyConnection: true,
-    notifySound: false,
+    'notify-chat': true,
+    'notify-health': true,
+    'notify-hunger': true,
+    'notify-enemy': true,
+    'notify-connection': true,
+    'notify-sound': false,
     // Advanced
-    perceptionInterval: 2000,
-    memoryInterval: 5000,
-    consoleLog: false,
-    enableProfiling: false
+    'perception-interval': 2000,
+    'memory-interval': 5000,
+    'console-log': false,
+    'enable-profiling': false,
+    // Integrations / Extra settings
+    'enable-webhook': false,
+    'webhook-url': '',
+    'enable-backup': false,
+    'backup-interval': 3600,
+    'backup-location': '',
+    'allow-remote-commands': false,
+    'admin-users': ''
   },
 
   load() {
@@ -390,7 +398,12 @@ const pageManager = {
     });
 
     // Logout button
-    document.getElementById('logout-btn').addEventListener('click', () => {
+    document.getElementById('logout-btn').addEventListener('click', async () => {
+      try {
+        await fetch('/logout', { method: 'POST' });
+      } catch (e) {
+        console.warn('Logout request failed', e);
+      }
       this.show('login');
       currentUser = null;
     });
@@ -472,7 +485,7 @@ function setupSocketListeners() {
 
   socket.on('disconnect', () => {
     updateConnectionStatus(false);
-    if (settingsManager.get('notifyConnection')) {
+    if (settingsManager.get('notify-connection')) {
       showNotification('Disconnected from bot', 'error');
     }
   });
@@ -483,6 +496,12 @@ function setupSocketListeners() {
 
   socket.on('chat', (msg) => {
     addChatMessage(msg);
+  });
+
+  socket.on('ai-command', (data) => {
+    // Display AI command responses or events
+    const text = typeof data === 'string' ? data : (data.response || data.command || JSON.stringify(data));
+    addChatMessage(`🤖 AI: ${text}`);
   });
 
   socket.on('inventory', (inventory) => {
@@ -539,7 +558,9 @@ function updateBotStatus(status) {
   
   // Alert if health low
   if (status.health && status.health < settingsManager.get('minHealth') && settingsManager.get('notifyHealth')) {
-    showNotification(`Health low: ${status.health}/20`, 'warning');
+    if (settingsManager.get('notify-health')) {
+      showNotification(`Health low: ${status.health}/20`, 'warning');
+    }
   }
 }
 
@@ -716,6 +737,20 @@ document.getElementById('chat-input').addEventListener('keypress', (e) => {
     document.getElementById('send-chat').click();
   }
 });
+
+// Send as AI command (special)
+const sendAiBtn = document.getElementById('send-ai');
+if (sendAiBtn) {
+  sendAiBtn.addEventListener('click', () => {
+    const input = document.getElementById('chat-input');
+    const text = input.value.trim();
+    if (text) {
+      socket.emit('ai-command', { command: text, user: currentUser || 'dashboard' });
+      addChatMessage(`→ AI Command: ${text}`);
+      input.value = '';
+    }
+  });
+}
 
 /* ============================================================================
                           SETTINGS MANAGEMENT

@@ -18,6 +18,11 @@ export function initializeSocket(server) {
       io.emit('chat', data);
     });
 
+    socket.on('ai-command', (data) => {
+      // Relay AI command events to all listeners (bot/processes)
+      io.emit('ai-command', data);
+    });
+
     socket.on('buildcity', (type) => {
       io.emit('buildcity', type);
     });
