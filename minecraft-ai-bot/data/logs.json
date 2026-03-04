@@ -35596,5 +35596,3305 @@
     "data": {
       "error": "read ECONNRESET"
     }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.589Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 44/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.589Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.589Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 45/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.608Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.608Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.608Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 46/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.622Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.622Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.622Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 47/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.623Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.623Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.624Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.624Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 48/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.624Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.624Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 49/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.639Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.639Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.639Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 50/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.661Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.661Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.661Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.678Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.678Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.678Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.678Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.678Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.678Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.678Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.678Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.679Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.679Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.679Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.680Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.681Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:26.681Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:30.017Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:30.397Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:30.397Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:30.397Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:36.177Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:36.603Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "{\"translate\":\"multiplayer.disconnect.duplicate_login\"}"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:36.604Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:36.604Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:36.701Z",
+    "level": "info",
+    "message": "Bot logged in successfully",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:36.823Z",
+    "level": "info",
+    "message": "Bot spawned",
+    "data": {
+      "pos": {
+        "x": 7.365068302393601,
+        "y": 70,
+        "z": 13.03374184555858
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:44.725Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:45.158Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "{\"translate\":\"multiplayer.disconnect.duplicate_login\"}"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:45.158Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:45.158Z",
+    "level": "warn",
+    "message": "Reconnecting in 1000ms (attempt 1/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:45.250Z",
+    "level": "info",
+    "message": "Bot logged in successfully",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:45.374Z",
+    "level": "info",
+    "message": "Bot spawned",
+    "data": {
+      "pos": {
+        "x": 7.365068302393601,
+        "y": 70,
+        "z": 13.03374184555858
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:46.158Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:46.537Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:46.538Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:46.538Z",
+    "level": "warn",
+    "message": "Reconnecting in 1000ms (attempt 1/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:47.538Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:47.913Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:47.913Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:47.913Z",
+    "level": "warn",
+    "message": "Reconnecting in 1500ms (attempt 2/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:49.414Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:49.677Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:49.677Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:49.677Z",
+    "level": "warn",
+    "message": "Reconnecting in 2250ms (attempt 3/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:51.927Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:52.303Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:52.304Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:52.304Z",
+    "level": "warn",
+    "message": "Reconnecting in 3375ms (attempt 4/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:52.304Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:52.304Z",
+    "level": "warn",
+    "message": "Reconnecting in 5062.5ms (attempt 5/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:52.843Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.221Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.221Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.221Z",
+    "level": "warn",
+    "message": "Reconnecting in 7593.75ms (attempt 6/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.348Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.382Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.389Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.630Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.630Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.630Z",
+    "level": "warn",
+    "message": "Reconnecting in 11390.625ms (attempt 7/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.638Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.639Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.639Z",
+    "level": "warn",
+    "message": "Reconnecting in 17085.9375ms (attempt 8/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.639Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.640Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.640Z",
+    "level": "warn",
+    "message": "Reconnecting in 25628.90625ms (attempt 9/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.730Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.734Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.735Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.990Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.990Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:53.990Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 10/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.108Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.109Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.109Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 11/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.109Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.109Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 12/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.109Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.109Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.109Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 13/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.565Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.585Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.596Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.597Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.606Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.646Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.824Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.824Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.824Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 14/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.830Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.830Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.830Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 15/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.842Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.842Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.842Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 16/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.845Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.846Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.846Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 17/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.852Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.852Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.852Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 18/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.897Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.897Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.897Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 19/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.910Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:54.921Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.028Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.052Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.178Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.179Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.179Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 20/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.179Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.179Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 21/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.182Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.182Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.182Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 22/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.226Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.286Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.286Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.287Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 23/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.324Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.324Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.324Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 24/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.324Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.324Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 25/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.476Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.477Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.477Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 26/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.477Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.477Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 27/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.548Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.679Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.805Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.805Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.805Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 28/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.898Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.906Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.909Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.910Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.940Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.940Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.940Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 29/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:55.982Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.174Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.174Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.174Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 30/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.174Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.174Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.175Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 31/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.175Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.175Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.175Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 32/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.178Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.179Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.179Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 33/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.229Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.229Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.229Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 34/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.317Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.323Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.369Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.371Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.389Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.420Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.421Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.471Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.477Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.573Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.573Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.573Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 35/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.575Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.576Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.576Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 36/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.582Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.593Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.594Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.611Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.621Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.621Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.621Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.621Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 37/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.632Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.633Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 38/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.633Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.635Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.637Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.638Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.638Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.638Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 39/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.662Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.681Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.682Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.682Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 40/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.682Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.682Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.682Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 41/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.717Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.718Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.718Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 42/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.718Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.718Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 43/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.733Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.733Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.733Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 44/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.733Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.733Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 45/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.837Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.837Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.837Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 46/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.854Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.854Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.854Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 47/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.854Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.854Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.854Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 48/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.860Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.860Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.860Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 49/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.882Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.882Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.883Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 50/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.885Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.886Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.886Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.886Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.886Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.907Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.907Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.908Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.926Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.926Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:56.926Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:57.366Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:57.621Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:27:57.621Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:27:57.621Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:00.814Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:01.190Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:01.190Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:01.190Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:01.190Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:01.190Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:05.021Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:05.300Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "{\"translate\":\"multiplayer.disconnect.duplicate_login\"}"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:05.301Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:05.301Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:05.363Z",
+    "level": "info",
+    "message": "Bot logged in successfully",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:05.474Z",
+    "level": "info",
+    "message": "Bot spawned",
+    "data": {
+      "pos": {
+        "x": 7.365068302393601,
+        "y": 70,
+        "z": 13.03374184555858
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:10.725Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:11.151Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "{\"translate\":\"multiplayer.disconnect.duplicate_login\"}"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:11.151Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:11.151Z",
+    "level": "warn",
+    "message": "Reconnecting in 1000ms (attempt 1/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:11.202Z",
+    "level": "info",
+    "message": "Bot logged in successfully",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:11.326Z",
+    "level": "info",
+    "message": "Bot spawned",
+    "data": {
+      "pos": {
+        "x": 7.365068302393601,
+        "y": 70,
+        "z": 13.03374184555858
+      }
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:12.151Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:12.532Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:12.532Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:12.532Z",
+    "level": "warn",
+    "message": "Reconnecting in 1000ms (attempt 1/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:12.532Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:12.532Z",
+    "level": "warn",
+    "message": "Reconnecting in 1500ms (attempt 2/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:13.532Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:13.778Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:13.779Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:13.779Z",
+    "level": "warn",
+    "message": "Reconnecting in 2250ms (attempt 3/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:14.033Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:14.408Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:14.409Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:14.409Z",
+    "level": "warn",
+    "message": "Reconnecting in 3375ms (attempt 4/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:16.030Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:16.305Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:16.305Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:16.305Z",
+    "level": "warn",
+    "message": "Reconnecting in 5062.5ms (attempt 5/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:17.784Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:18.038Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:18.038Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:18.038Z",
+    "level": "warn",
+    "message": "Reconnecting in 7593.75ms (attempt 6/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:19.268Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:19.645Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:19.645Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:19.645Z",
+    "level": "warn",
+    "message": "Reconnecting in 11390.625ms (attempt 7/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:21.368Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:21.622Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:21.622Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:21.622Z",
+    "level": "warn",
+    "message": "Reconnecting in 17085.9375ms (attempt 8/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:21.622Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:21.622Z",
+    "level": "warn",
+    "message": "Reconnecting in 25628.90625ms (attempt 9/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:23.990Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.109Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.111Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.112Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.251Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.252Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.252Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 10/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.252Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.252Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 11/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.486Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.487Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.487Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 12/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.487Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.487Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 13/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.487Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.487Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.488Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 14/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.488Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.488Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 15/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.492Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.493Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.493Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 16/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.825Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.831Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.842Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.848Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.854Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:24.897Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.079Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.080Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.080Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 17/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.080Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.080Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 18/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.081Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.081Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.081Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 19/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.088Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.088Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.088Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 20/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.088Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.088Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 21/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.098Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.098Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.098Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 22/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.105Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.105Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.105Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 23/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.149Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.149Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.149Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 24/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.179Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.193Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.220Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.296Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.325Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.328Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.479Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.482Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.515Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.515Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.516Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.516Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 25/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.517Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.517Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 26/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.527Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.527Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.527Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 27/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.567Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.567Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.567Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 28/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.573Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.574Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.574Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 29/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.631Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.646Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.648Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.648Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 30/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.729Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.730Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.730Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 31/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.753Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.754Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.754Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 32/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.754Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.754Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 33/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.805Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.876Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.877Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.877Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 34/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:25.940Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.071Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.071Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.071Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 35/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.174Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.178Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.187Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.196Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.196Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.196Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 36/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.197Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.229Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.421Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.421Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.421Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 37/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.421Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.421Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 38/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.440Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.441Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.441Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 39/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.441Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.441Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 40/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.441Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.441Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.441Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 41/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.459Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.459Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.459Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 42/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.483Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.483Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.483Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 43/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.483Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.483Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 44/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.573Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.579Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.633Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.634Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.644Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.682Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.683Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.718Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.719Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.734Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.735Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.823Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.823Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.823Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 45/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.825Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.825Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.825Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 46/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.837Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.854Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.855Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.868Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.878Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.878Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.878Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 47/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.882Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.882Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.882Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 48/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.883Z",
+    "level": "info",
+    "message": "Attempting to connect to stackables.aternos.me:39639",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.890Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.890Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.890Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 49/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.928Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.929Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.929Z",
+    "level": "warn",
+    "message": "Reconnecting in 30000ms (attempt 50/50)",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.931Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.931Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.931Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.931Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.931Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.967Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.967Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.967Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.967Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.967Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.967Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.989Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.989Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.989Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.990Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.990Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.991Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.991Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.991Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.991Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:26.991Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.091Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.091Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.091Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.091Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.092Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.101Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.101Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.101Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.101Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.101Z",
+    "level": "error",
+    "message": "Bot connection error",
+    "data": {
+      "error": "read ECONNRESET"
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.101Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.101Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.101Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.123Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.123Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.123Z",
+    "level": "error",
+    "message": "Max reconnection attempts reached. Giving up.",
+    "data": null
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.135Z",
+    "level": "warn",
+    "message": "Bot kicked from server",
+    "data": {
+      "reason": "\"Connection throttled! Please wait before reconnecting.\""
+    }
+  },
+  {
+    "timestamp": "2026-03-04T14:28:27.135Z",
+    "level": "warn",
+    "message": "Bot disconnected from server",
+    "data": null
   }
 ]
