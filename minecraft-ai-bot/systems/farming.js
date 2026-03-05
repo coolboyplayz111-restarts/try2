@@ -4,10 +4,16 @@ export default class Farming {
   constructor(bot) {
     this.bot = bot;
     this.isFarming = false;
+    this.enabled = true; // Default enabled
     logger.info('Farming system initialized');
   }
 
   async plantCrops(cropType = 'wheat', count = 10) {
+    if (!this.enabled) {
+      logger.debug('Farming is disabled');
+      return false;
+    }
+
     if (!this.bot) {
       logger.warn('Bot not available for farming');
       return false;
@@ -139,6 +145,80 @@ export default class Farming {
 
   isFarmingActive() {
     return this.isFarming;
+  }
+
+  async autoTendFarm(radius = 20) {
+    if (!this.enabled) {
+      logger.debug('Farming is disabled');
+      return false;
+    }
+
+    if (!this.bot) {
+      logger.warn('Bot not available for auto-farming');
+      return false;
+    }
+
+    this.isFarming = true;
+
+    try {
+      const botPos = this.bot.entity.position;
+      let harvested = 0;
+      let planted = 0;
+
+      logger.info('Auto-tending farm', { radius });
+
+      for (let x = -radius; x <= radius; x++) {
+        for (let z = -radius; z <= radius; z++) {
+          const block = this.bot.blockAt(botPos.offset(x, 0, z));
+          const above = this.bot.blockAt(botPos.offset(x, 1, z));
+
+          if (block && block.name === 'farmland') {
+            // Check if crop is ready to harvest
+            if (above && (above.name === 'wheat' || above.name === 'carrots' || above.name === 'potatoes') && above.metadata >= 7) {
+              await this.bot.dig(above);
+              harvested++;
+              await this.sleep(200);
+
+              // Replant
+              const seed = this.getSeedForCrop(above.name);
+              const seedItem = this.bot.inventory.items().find(item => item.name === seed);
+              if (seedItem) {
+                await this.bot.equip(seedItem, 'hand');
+                await this.bot.placeBlock(block, { x: 0, y: 1, z: 0 });
+                planted++;
+                await this.sleep(300);
+              }
+            } else if (above && above.name === 'air') {
+              // Plant if empty
+              const seed = this.bot.inventory.items().find(item => item.name === 'wheat_seeds');
+              if (seed) {
+                await this.bot.equip(seed, 'hand');
+                await this.bot.placeBlock(block, { x: 0, y: 1, z: 0 });
+                planted++;
+                await this.sleep(300);
+              }
+            }
+          }
+        }
+      }
+
+      this.isFarming = false;
+      logger.info('Auto-farm tending completed', { harvested, planted });
+      return { harvested, planted };
+    } catch (err) {
+      logger.error('Auto-farm error', { error: err.message });
+      this.isFarming = false;
+      return false;
+    }
+  }
+
+  getSeedForCrop(cropName) {
+    const seeds = {
+      wheat: 'wheat_seeds',
+      carrots: 'carrot',
+      potatoes: 'potato'
+    };
+    return seeds[cropName] || 'wheat_seeds';
   }
 
   sleep(ms) {

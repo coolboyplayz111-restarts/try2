@@ -12,6 +12,7 @@ import Memory from '../ai/memory.js';
 import Planner from '../ai/planner.js';
 import Learning from '../ai/learning.js';
 import Conversation from '../ai/conversation.js';
+import ChatManager from '../ai/chatManager.js';
 import CityPlanner from '../ai/cityPlanner.js';
 
 // Import system modules
@@ -47,7 +48,7 @@ async function initializeBotSystems() {
     planner: new Planner(),
     learning: new Learning(),
     brain: new SmartBrain(bot, null), // Will be populated below
-    conversation: new Conversation(),
+    conversation: new Conversation(bot.username || ''),
     cityPlanner: new CityPlanner(),
     commandProcessor: commandProcessor
   };
@@ -85,6 +86,19 @@ async function initializeBotSystems() {
       }
     } catch (err) {
       logger.debug('Smart brain command error', { error: err.message });
+    }
+  });
+
+  // Chat manager handles player conversations and mentions
+  aiModules.chatManager = new ChatManager(bot, aiModules.conversation, {
+    defaultPersonality: 'helpful',
+    rateLimit: config.ai.chatRateLimit
+  });
+  bot.on('chat', async (username, message) => {
+    try {
+      await aiModules.chatManager.handleChat(username, message);
+    } catch (e) {
+      logger.debug('chat event handler error', { error: e.message });
     }
   });
 
@@ -131,25 +145,60 @@ async function executeAction(action) {
         break;
       case 'mine':
         if (aiModules.mining && action.oreType) {
-          await aiModules.mining.mineOres(action.oreType, 10);
-        }
-        break;
-      case 'eat':
-        if (bot.food < 18 && aiModules.inventory) {
-          await aiModules.inventory.eatFood();
-        }
-        break;
-      case 'defend':
-        if (aiModules.survival) {
-          await aiModules.survival.seekShelter();
-        }
-        break;
-      default:
-        logger.debug('Unknown action type', { actionType: action.type });
-    }
-  } catch (err) {
-    logger.debug('Action execution error', { error: err.message, action: action.type });
-  }
+           await aiModules.mining.mineOres(action.oreType, action.count || 10);
+         }
+         break;
+       case 'stripmine':
+         if (aiModules.mining) {
+           await aiModules.mining.mineOres('stone', 100);
+         }
+         break;
+       case 'quarry':
+         if (aiModules.mining) {
+           // simple quarry: mine all ores in range
+           await aiModules.mining.mineOres('iron_ore', 50);
+         }
+         break;
+       case 'digdown':
+         if (aiModules.mining && aiModules.movement) {
+           // dig straight down a few blocks
+           const pos = bot.entity.position;
+           for (let i = 1; i <= 5; i++) {
+             const block = bot.blockAt(pos.offset(0, -i, 0));
+             if (block) await aiModules.mining.mineBlock(block);
+           }
+         }
+         break;
+       case 'digup':
+         if (aiModules.mining && aiModules.movement) {
+           const pos = bot.entity.position;
+           for (let i = 1; i <= 5; i++) {
+             const block = bot.blockAt(pos.offset(0, i, 0));
+             if (block) await aiModules.mining.mineBlock(block);
+           }
+         }
+         break;
+       case 'farm':
+         if (aiModules.farming) {
+           await aiModules.farming.plantCrops(action.cropType || 'wheat', action.count || 10);
+         }
+         break;
+       case 'harvest':
+         if (aiModules.farming) {
+           await aiModules.farming.harvestCrops(action.cropType || 'wheat');
+         }
+         break;
+       case 'breed':
+         if (aiModules.farming) {
+           await aiModules.farming.breedAnimals(action.animal || 'cow');
+         }
+         break;
+       default:
+         logger.debug('Unknown action type', { actionType: action.type });
+     }
+   } catch (err) {
+     logger.debug('Action execution error', { error: err.message, action: action.type });
+   }
 }
 
 async function startBot() {
@@ -250,8 +299,84 @@ function wireDashboardIntegration() {
                 executeAction(cmd.data).catch(e=>logger.error('Forced task failed',{error:e.message,task:cmd.data}));
               }
               break;
+            case 'toggle-auto-move':
+              try {
+                const enabled = cmd.data && typeof cmd.data.enabled === 'boolean' ? cmd.data.enabled : !aiModules.movement.isAutoMoveEnabled();
+                if (aiModules.movement && typeof aiModules.movement.setAutoMove === 'function') {
+                  aiModules.movement.setAutoMove(enabled);
+                }
+              } catch (e) { logger.debug('toggle-auto-move error', { error: e.message }) }
+              break;
+            case 'toggle-reconnect':
+              try {
+                const enabled = cmd.data && typeof cmd.data.enabled === 'boolean' ? cmd.data.enabled : true;
+                if (connection && typeof connection.setReconnectEnabled === 'function') {
+                  connection.setReconnectEnabled(enabled);
+                }
+              } catch (e) { logger.debug('toggle-reconnect error', { error: e.message }) }
+              break;
             default:
               break;
+          }
+        });
+
+        socket.on('toggle-changed', (data) => {
+          logger.info('Feature toggle changed', data);
+          const { feature, enabled } = data;
+          
+          switch (feature) {
+            case 'aiChat':
+              if (aiModules.chatManager) {
+                aiModules.chatManager.enabled = enabled;
+              }
+              break;
+            case 'farming':
+              if (aiModules.farming) {
+                aiModules.farming.enabled = enabled;
+              }
+              break;
+            case 'mining':
+              if (aiModules.mining) {
+                aiModules.mining.enabled = enabled;
+              }
+              break;
+            case 'combat':
+              if (aiModules.combat) {
+                aiModules.combat.enabled = enabled;
+              }
+              break;
+            case 'survival':
+              if (aiModules.survival) {
+                aiModules.survival.enabled = enabled;
+              }
+              break;
+            case 'building':
+              if (aiModules.builder) {
+                aiModules.builder.enabled = enabled;
+              }
+              break;
+            case 'crafting':
+              if (aiModules.crafting) {
+                aiModules.crafting.enabled = enabled;
+              }
+              break;
+            case 'inventory':
+              if (aiModules.inventory) {
+                aiModules.inventory.enabled = enabled;
+              }
+              break;
+            case 'pathfinding':
+              if (aiModules.movement) {
+                aiModules.movement.enabled = enabled;
+              }
+              break;
+            case 'learning':
+              if (aiModules.learning) {
+                aiModules.learning.enabled = enabled;
+              }
+              break;
+            default:
+              logger.debug('Unknown feature toggle', { feature });
           }
         });
       });
@@ -295,9 +420,11 @@ function wireDashboardIntegration() {
                   currentGoal: currentTask ? currentTask.type : null,
                   targetBlock: currentTask && currentTask.oreType ? currentTask.oreType : null,
                   confidence: 0.9,
-                  currentTask
+                  currentTask,
+                  structures: aiModules.builder ? aiModules.builder.getAvailableStructures() : []
                 },
                 perception: aiModules.perception ? aiModules.perception.lastPerception : null,
+                viewerPort: connection && connection.viewerPort ? connection.viewerPort : null,
                 performance: {
                   cpu: process.cpuUsage(),
                   memory: process.memoryUsage(),

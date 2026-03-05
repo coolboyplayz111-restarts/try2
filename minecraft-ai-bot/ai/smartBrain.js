@@ -16,6 +16,12 @@ export default class SmartBrain {
       verbose: false    // Don't say unnecessary things
     };
     this.understanding = {};
+    this.priorities = {
+      survival: 1,
+      defense: 2,
+      resourceGathering: 3,
+      exploration: 5
+    };
   }
 
   /**
@@ -151,20 +157,50 @@ export default class SmartBrain {
    * Decide next action based on situation
    */
   async decideAction(perception, memory) {
-    if (this.paused || this.paused) return null;
+     if (this.paused) return null;
 
-    // If there's a task queue, do next task
-    if (this.taskQueue.length > 0) {
-      return this.taskQueue.shift();
-    }
+     // If there's a task queue, do next task
+     if (this.taskQueue.length > 0) {
+       return this.taskQueue.shift();
+     }
 
-    // Survival logic
-    if (this.bot.health && this.bot.health < 5) {
-      return { type: 'retreat', priority: 1 };
-    }
-    if (this.bot.food && this.bot.food < 8) {
-      return { type: 'eat', priority: 1 };
-    }
+     // Survival logic
+     if (this.bot.health && this.bot.health < 5) {
+       return { type: 'retreat', priority: this.priorities.survival };
+     }
+     if (this.bot.food && this.bot.food < 8) {
+       return { type: 'eat', priority: this.priorities.survival };
+     }
+
+     // Defense: attack nearby hostiles first
+     if (perception.hostileMobs && perception.hostileMobs.length > 0) {
+       return { type: 'attack', target: perception.hostileMobs[0], priority: this.priorities.defense };
+     }
+
+     // Resource gathering: mine ores if detected
+     if (perception.ores && perception.ores.length > 0) {
+       const ore = perception.ores[0];
+       return { type: 'mine', oreType: ore.type, priority: this.priorities.resourceGathering };
+     }
+
+     // Farming: harvest crops if any ready
+     if (perception.blocks && perception.blocks.crops && perception.blocks.crops.length > 0) {
+       const crop = perception.blocks.crops[0];
+       return { type: 'harvest', cropType: crop.name, priority: this.priorities.resourceGathering };
+     }
+
+     // If nothing else, maybe explore randomly
+     if (Math.random() < 0.2) {
+       const randomX = Math.random() * 1000 - 500;
+       const randomZ = Math.random() * 1000 - 500;
+       return {
+         type: 'move',
+         x: randomX,
+         y: 64,
+         z: randomZ,
+         priority: this.priorities.exploration
+       };
+     }
 
     // Default: idle
     return null;

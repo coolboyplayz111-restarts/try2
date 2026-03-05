@@ -4,6 +4,7 @@ export default class Survival {
   constructor(bot) {
     this.bot = bot;
     this.hasShelter = false;
+    this.enabled = true; // Default enabled
     logger.info('Survival system initialized');
   }
 

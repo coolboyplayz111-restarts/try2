@@ -16,7 +16,8 @@ export const config = {
   // OpenAI
   openai: {
     apiKey: process.env.OPENAI_API_KEY || '',
-    model: process.env.OPENAI_MODEL || 'gpt-3.5-turbo'
+    // prefer the latest fast model; can be overridden via OPENAI_MODEL in .env
+    model: process.env.OPENAI_MODEL || 'gpt-4o-mini'
   },
 
   // Dashboard
@@ -40,7 +41,11 @@ export const config = {
     updateInterval: 2000, // ms - update perception every 2 seconds
     perceptionRange: 32, // blocks
     memoryPersistInterval: 5000, // ms
-    maxMemorySize: 10000 // max stored memories
+    maxMemorySize: 10000, // max stored memories
+    chatRateLimit: {
+      windowMs: 10000, // 10 seconds window
+      max: 5           // max requests per window per player
+    }
   },
 
   // Reconnection

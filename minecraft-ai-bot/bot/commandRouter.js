@@ -87,10 +87,40 @@ export class CommandRouter {
       }
     });
 
-    // Reconnect
-    this.register('reconnect', async (args) => {
-      this.bot.chat('Reconnecting to server');
-      logger.info('Reconnect command issued');
+    // Personality control
+    this.register('personality', async (args) => {
+      if (!this.aiModules.chatManager) {
+        this.bot.chat('No chat manager available');
+        return;
+      }
+      if (args.length === 0) {
+        this.bot.chat(`Current personality: ${this.aiModules.chatManager.defaultPersonality}`);
+      } else {
+        const p = args[0].toLowerCase();
+        this.aiModules.chatManager.defaultPersonality = p;
+        this.bot.chat(`Personality set to ${p}`);
+        logger.info('Personality changed', { personality: p });
+      }
+    });
+
+    // Combat commands
+    this.register('fight', async (args) => {
+      if (this.aiModules.combat) {
+        const action = args[0] || 'auto';
+        if (action === 'auto') {
+          const radius = parseInt(args[1]) || 32;
+          this.bot.chat(`Starting auto-combat in ${radius} block radius...`);
+          await this.aiModules.combat.autoCombat(radius);
+          this.bot.chat('Auto-combat ended');
+        } else if (action === 'stop') {
+          this.aiModules.combat.stopAttack();
+          this.bot.chat('Combat stopped');
+        } else if (action === 'defend') {
+          this.aiModules.combat.defendPlayers();
+          this.bot.chat('Defending against nearby threats');
+        }
+        logger.info('Fight command executed', { action });
+      }
     });
   }
 

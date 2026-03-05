@@ -5,10 +5,16 @@ export default class Combat {
     this.bot = bot;
     this.isInCombat = false;
     this.currentTarget = null;
+    this.enabled = true; // Default enabled
     logger.info('Combat system initialized');
   }
 
   async attack(target) {
+    if (!this.enabled) {
+      logger.debug('Combat is disabled');
+      return false;
+    }
+
     if (!target || !this.bot) {
       logger.warn('Invalid combat target');
       return false;
@@ -114,8 +120,76 @@ export default class Combat {
     return this.isInCombat;
   }
 
-  sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+  async autoCombat(radius = 32) {
+    if (!this.enabled) {
+      logger.debug('Combat is disabled');
+      return false;
+    }
+
+    if (!this.bot) {
+      logger.warn('Bot not available for combat');
+      return false;
+    }
+
+    this.isInCombat = true;
+
+    try {
+      logger.info('Starting auto-combat', { radius });
+
+      while (this.isInCombat) {
+        // Find nearest hostile mob
+        const hostileMobs = Object.values(this.bot.entities).filter(e =>
+          e.type === 'mob' &&
+          ['creeper', 'skeleton', 'zombie', 'spider', 'enderman', 'witch'].includes(e.name) &&
+          this.bot.entity.position.distanceTo(e.position) < radius
+        );
+
+        if (hostileMobs.length > 0) {
+          // Sort by distance
+          hostileMobs.sort((a, b) =>
+            this.bot.entity.position.distanceTo(a.position) -
+            this.bot.entity.position.distanceTo(b.position)
+          );
+
+          const target = hostileMobs[0];
+          logger.info('Engaging target', { target: target.name, distance: Math.round(this.bot.entity.position.distanceTo(target.position)) });
+
+          // Special handling for creepers
+          if (target.name === 'creeper') {
+            const retreatPos = await this.defendAgainstCreepers();
+            if (retreatPos) {
+              // Move away from creeper
+              if (this.bot.pathfinder) {
+                const goal = new (require('mineflayer-pathfinder')).goals.GoalBlock(
+                  Math.round(retreatPos.x),
+                  Math.round(retreatPos.y),
+                  Math.round(retreatPos.z)
+                );
+                this.bot.pathfinder.setGoal(goal, false);
+                await this.sleep(2000);
+              }
+              continue;
+            }
+          }
+
+          // Attack the target
+          await this.attack(target);
+
+          // Wait a bit before checking again
+          await this.sleep(1000);
+        } else {
+          // No targets found, exit auto-combat
+          logger.info('No hostile mobs found, ending auto-combat');
+          this.isInCombat = false;
+        }
+      }
+
+      return true;
+    } catch (err) {
+      logger.error('Auto-combat error', { error: err.message });
+      this.isInCombat = false;
+      return false;
+    }
   }
 
   async defendAgainstCreepers() {

@@ -11,6 +11,7 @@ export class BotConnection {
     this.reconnectDelay = config.reconnection.initialDelay;
     this.isIntentionallyClosed = false;
     this.eventListeners = [];
+    this.reconnectEnabled = config.reconnection.enabled;
   }
 
   async connect() {
@@ -64,23 +65,25 @@ export class BotConnection {
             const viewerFn = viewerLib.default || viewerLib.mineflayerViewer;
             if (viewerFn && this.bot.entity) {
               viewerFn(this.bot, { port: viewerPort, firstPerson: false });
+              this.viewerPort = viewerPort;
               logger.info('Viewer started', { port: viewerPort });
             }
           } catch (e) {
+            this.viewerPort = null;
             logger.debug('Viewer not available or failed to start', { error: e.message });
           }
         });
 
         this.bot.on('end', () => {
           logger.warn('Bot disconnected from server');
-          if (!this.isIntentionallyClosed && config.reconnection.enabled) {
+          if (!this.isIntentionallyClosed && this.reconnectEnabled) {
             this.scheduleReconnect();
           }
         });
 
         this.bot.on('error', (err) => {
           logger.error('Bot connection error', { error: err.message });
-          if (!this.isIntentionallyClosed && config.reconnection.enabled) {
+          if (!this.isIntentionallyClosed && this.reconnectEnabled) {
             this.scheduleReconnect();
           }
         });
@@ -128,6 +131,11 @@ export class BotConnection {
         logger.error('Reconnection failed', { error: err.message });
       });
     }, delay);
+  }
+
+  setReconnectEnabled(enabled = true) {
+    this.reconnectEnabled = !!enabled;
+    logger.info('Reconnect enabled set', { enabled: this.reconnectEnabled });
   }
 
   disconnect() {

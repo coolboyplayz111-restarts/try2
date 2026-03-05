@@ -1,4 +1,6 @@
 import logger from '../bot/logger.js';
+import fs from 'fs';
+import path from 'path';
 
 export default class Builder {
   constructor(bot) {
@@ -34,10 +36,18 @@ export default class Builder {
       ]
     };
 
+    // attempt to load blueprints from data/blueprints
+    this.loadAllBlueprints();
     logger.info('Builder system initialized');
   }
 
   async buildStructure(structureType, position) {
+    // allow passing in a blueprint object directly
+    if (!this.structures[structureType] && structureType && typeof structureType !== 'string') {
+      // if object given
+      this.structures.tempBlueprint = structureType;
+      structureType = 'tempBlueprint';
+    }
     if (!this.bot) {
       logger.warn('Bot not available for building');
       return false;
@@ -199,5 +209,30 @@ export default class Builder {
 
   getAvailableStructures() {
     return Object.keys(this.structures);
+  }
+
+  loadBlueprint(name, filePath) {
+    try {
+      const raw = fs.readFileSync(filePath, 'utf-8');
+      const data = JSON.parse(raw);
+      if (Array.isArray(data)) {
+        this.structures[name] = data;
+        logger.info('Loaded blueprint', { name, filePath });
+      } else {
+        logger.warn('Blueprint file did not contain array', { name, filePath });
+      }
+    } catch (e) {
+      logger.error('Failed to load blueprint', { name, filePath, error: e.message });
+    }
+  }
+
+  loadAllBlueprints() {
+    const dir = path.resolve(process.cwd(), 'data', 'blueprints');
+    if (!fs.existsSync(dir)) return;
+    const files = fs.readdirSync(dir).filter(f => f.endsWith('.json'));
+    files.forEach(f => {
+      const name = path.basename(f, '.json');
+      this.loadBlueprint(name, path.join(dir, f));
+    });
   }
 }

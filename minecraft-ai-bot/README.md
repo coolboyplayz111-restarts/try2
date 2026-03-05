@@ -48,15 +48,20 @@ For detailed setup, see [QUICKSTART.md](QUICKSTART.md)
 - **Event Log**: Live activity stream
 
 ### 💬 AI Chat Tab
-- Conversational AI with OpenAI integration
-- **Personality modes**: Helpful, Aggressive, Cautious, Funny
-- **Command detection**: Auto-execute Minecraft commands
+- Conversational AI with OpenAI integration (uses GPT‑4o‑mini by default)
+- **Per-player memory** (last 20 back‑and‑forth messages) for context‑aware responses
+- **Rate limiting**: prevents abuse by limiting AI replies per player (default 5 calls/10 s)
+- **Personality modes**: Helpful, Aggressive, Cautious, Funny (changeable via UI or in‑game `!personality`)
+- **Command detection**: Auto‑execute Minecraft instructions when useful (AI may suggest `!` commands)
   - Movement: "go to 100 64 200"  
-  - Mining: "dig for diamonds"
-  - Farming: "farm", farming
-  - Building: "build"
-  - Combat: "fight"
+  - Mining: "mine auto iron_ore 20" (auto-tunnels), "mine ore diamond 5", "mine diamond 3re 20" (auto-tunnels), "mine ore diamond 5", "mine diamond 3"
+  - Farming: "farm auto" (auto-tends crops), "farm plant wheat 20", "farm harvest"
+  - Building: "build" (can add structure name or select from dashboard dropdown; custom blueprints are loaded from `data/blueprints`)
+  - Combat: "fight auto 32" (auto-attacks nearby mobs), "fight defend", "fight stop"
   - Control: "pause", "resume"
+- **Mention/DM triggers**: bot replies when its name is spoken, `!ask` prefixed, or in direct messages
+- **Spam filtering**: repeated messages are ignored to avoid chat spam
+- Fallback text provided if the OpenAI API fails or is unavailable
 
 ### 📋 Tasks Tab
 - Create and track tasks/goals
@@ -92,6 +97,7 @@ minecraft-ai-bot/
 │   ├── config.js          # Configuration
 │   └── logger.js          # Logging
 ├── ai/                     # AI modules
+├── data/                   # game data and blueprints
 │   ├── brain.js           # Decision making
 │   ├── perception.js      # World sensing
 │   ├── memory.js          # State storage
@@ -118,6 +124,9 @@ minecraft-ai-bot/
 ```
 
 ## 🎯 Commands via AI Chat
+The bot now supports automatic decision making:
+- **Autonomous mining and farming:** the AI will mine nearby ores and harvest crops when detected.
+- **Expanded command set:** `!stripmine`, `!quarry`, `!digdown`, `!digup`, `!harvest`, `!breed <animal>` and more trigger real system actions.
 
 | Command | Effect |
 |---------|--------|
@@ -161,6 +170,7 @@ AI chat with command execution
 ### WebSocket Events
 - `telemetry`: Bot status updates
 - `chat`: Chat messages  
+- `telemetry`: Bot state/perception (used by dashboard to drive live AI feed)  
 - `log`: Event log entries
 - `control`: Bot movement commands
 - `dashboard-command`: Pause/resume/etc

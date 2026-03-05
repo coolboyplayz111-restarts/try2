@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-export default function TasksPanel({ telemetry, onLog }) {
+export default function TasksPanel({ telemetry, onLog, apiToken }) {
   const [tasks, setTasks] = useState([])
   const [newTask, setNewTask] = useState('')
   const [priority, setPriority] = useState('medium')
@@ -14,19 +14,56 @@ export default function TasksPanel({ telemetry, onLog }) {
       completed: false,
       createdAt: new Date().toLocaleTimeString()
     }
-    setTasks(t => [task, ...t])
+    setTasks(t => {
+      const next = [task, ...t]
+      try { localStorage.setItem('tasks', JSON.stringify(next)) } catch (e) {}
+      return next
+    })
     setNewTask('')
     onLog(`Task added: ${newTask}`)
   }
 
   function toggleTask(id) {
-    setTasks(t => t.map(task => 
-      task.id === id ? { ...task, completed: !task.completed } : task
-    ))
+    setTasks(t => {
+      const next = t.map(task => task.id === id ? { ...task, completed: !task.completed } : task)
+      try { localStorage.setItem('tasks', JSON.stringify(next)) } catch (e) {}
+      return next
+    })
   }
 
   function deleteTask(id) {
-    setTasks(t => t.filter(task => task.id !== id))
+    setTasks(t => {
+      const next = t.filter(task => task.id !== id)
+      try { localStorage.setItem('tasks', JSON.stringify(next)) } catch (e) {}
+      return next
+    })
+  }
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem('tasks')
+      if (saved) setTasks(JSON.parse(saved))
+    } catch (e) {}
+  }, [])
+
+  async function doNow(task) {
+    if (!apiToken && !localStorage.getItem('apiToken')) {
+      onLog('No API token available to send command')
+      return
+    }
+    const token = apiToken || localStorage.getItem('apiToken')
+    try {
+      const res = await fetch('/bot/command', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-api-token': token },
+        body: JSON.stringify({ type: 'force-task', data: { type: 'task', text: task.text } })
+      })
+      const j = await res.json()
+      if (j.ok) onLog(`Task sent to bot: ${task.text}`)
+      else onLog(`Task send failed: ${j.error}`)
+    } catch (e) {
+      onLog(`Task send error: ${e.message}`)
+    }
   }
 
   const pendingCount = tasks.filter(t => !t.completed).length
@@ -67,7 +104,10 @@ export default function TasksPanel({ telemetry, onLog }) {
               <div className="task-text">{task.text}</div>
               <div className="task-meta">{task.createdAt}</div>
             </div>
-            <button className="delete-btn" onClick={() => deleteTask(task.id)}>✕</button>
+            <div className="task-actions">
+              <button className="do-now-btn" onClick={() => doNow(task)}>Do Now</button>
+              <button className="delete-btn" onClick={() => deleteTask(task.id)}>✕</button>
+            </div>
           </div>
         ))}
       </div>

@@ -156,7 +156,8 @@ export default class Perception {
       furnaces: [],
       lava: [],
       water: [],
-      caves: []
+      caves: [],
+      crops: [] // detect harvestable crops
     };
 
     const range = config.ai.perceptionRange;
@@ -176,6 +177,12 @@ export default class Perception {
             blocks.lava.push({ position: block.position.clone() });
           } else if (block.name === 'water' || block.name === 'flowing_water') {
             blocks.water.push({ position: block.position.clone() });
+          }
+
+          // detect crops that are fully grown
+          const cropTypes = ['wheat', 'carrots', 'potatoes', 'beetroots', 'nether_wart'];
+          if (cropTypes.includes(block.name) && block.metadata >= 7) {
+            blocks.crops.push({ name: block.name, position: block.position.clone(), metadata: block.metadata });
           }
         }
       }

@@ -127,7 +127,7 @@ export default class CommandProcessor {
   cmdHelp() {
     return {
       success: true,
-      response: `Available commands: !help, !ping, !coords, !health, !food, !inventory, !stats, !follow <player>, !goto <x y z>, !mine <block>, !farm, !build, !pvp <player>, !attack, !defend, !stop, !come, !wander, !retreat, !drop <item>, !craft <item>, !sort, !status, and many more!`
+      response: `Available commands: !help, !ping, !coords, !health, !food, !inventory, !stats, !follow <player>, !goto <x y z>, !mine <block>, !stripmine, !quarry, !digdown, !digup, !farm, !harvest, !breed <animal>, !build, !pvp <player>, !attack, !defend, !stop, !come, !wander, !retreat, !drop <item>, !craft <item>, !sort, !status, and many more!`
     };
   }
 
@@ -276,18 +276,31 @@ export default class CommandProcessor {
   }
 
   async cmdStripMine() {
+    if (this.ai.mining) this.ai.mining.mineOres('stone', 100);
+    this.stats.commandsExecuted++;
     return { success: true, response: 'Starting strip mine...', isCommand: true, data: { type: 'stripmine' } };
   }
 
   async cmdQuarry() {
+    if (this.ai.mining) this.ai.mining.mineOres('iron_ore', 50);
+    this.stats.commandsExecuted++;
     return { success: true, response: 'Starting quarry mining...', isCommand: true, data: { type: 'quarry' } };
   }
 
   async cmdDigDown() {
+    if (this.ai.mining) {
+      const action = { type:'digdown' };
+      // will be executed by executeAction
+    }
+    this.stats.commandsExecuted++;
     return { success: true, response: 'Digging downward...', isCommand: true, data: { type: 'digdown' } };
   }
 
   async cmdDigUp() {
+    if (this.ai.mining) {
+      const action = { type:'digup' };
+    }
+    this.stats.commandsExecuted++;
     return { success: true, response: 'Digging upward...', isCommand: true, data: { type: 'digup' } };
   }
 
@@ -295,10 +308,13 @@ export default class CommandProcessor {
   async cmdFarm() {
     if (!this.ai.farming) return { success: false, error: 'Farming unavailable' };
     this.stats.commandsExecuted++;
+    this.ai.farming.plantCrops();
     return { success: true, response: 'Starting farming operations...', isCommand: true, data: { type: 'farm' } };
   }
 
   async cmdHarvest() {
+    if (this.ai.farming) this.ai.farming.harvestCrops();
+    this.stats.commandsExecuted++;
     return { success: true, response: 'Harvesting crops...', isCommand: true, data: { type: 'harvest' } };
   }
 
@@ -307,6 +323,8 @@ export default class CommandProcessor {
   }
 
   async cmdBreed(animal) {
+    if (this.ai.farming) this.ai.farming.breedAnimals(animal);
+    this.stats.commandsExecuted++;
     return { success: true, response: `Breeding ${animal}s...`, isCommand: true, data: { type: 'breed', animal } };
   }
 
@@ -351,6 +369,8 @@ export default class CommandProcessor {
     const structure = args[0] || 'wall';
     if (!this.ai.builder && !this.ai.cityBuilder) return { success: false, error: 'Builder unavailable' };
     this.stats.commandsExecuted++;
+    // optionally kick off builder module
+    if (this.ai.builder) this.ai.builder.buildStructure(structure);
     return { success: true, response: `Building ${structure}...`, isCommand: true, data: { type: 'build', structure } };
   }
 

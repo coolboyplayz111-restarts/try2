@@ -5,6 +5,7 @@ export default class Movement {
     this.bot = bot;
     this.currentTarget = null;
     this.isMoving = false;
+    this.autoMove = false;
     logger.info('Movement system initialized');
   }
 
@@ -61,6 +62,15 @@ export default class Movement {
       this.isMoving = false;
       logger.debug('Movement stopped');
     }
+  }
+
+  setAutoMove(enabled = true) {
+    this.autoMove = !!enabled;
+    logger.info('Auto-move set', { enabled: this.autoMove });
+  }
+
+  isAutoMoveEnabled() {
+    return !!this.autoMove;
   }
 
   jump() {

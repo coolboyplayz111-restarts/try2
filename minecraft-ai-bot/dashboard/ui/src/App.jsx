@@ -2,9 +2,12 @@ import React, { useEffect, useState, useRef } from 'react'
 import { io } from 'socket.io-client'
 import StatsPanel from './components/StatsPanel'
 import AIPanel from './components/AIPanel'
+import LiveAIFeed from './components/LiveAIFeed'
 import AIChat from './components/AIChat'
+import BotChat from './components/BotChat'
 import TasksPanel from './components/TasksPanel'
 import SettingsPanel from './components/SettingsPanel'
+import TogglesPanel from './components/TogglesPanel'
 import InventoryPanel from './components/InventoryPanel'
 import MapView from './components/MapView'
 import EventLog from './components/EventLog'
@@ -16,6 +19,7 @@ export default function App() {
   const [logs, setLogs] = useState([])
   const [apiToken, setApiToken] = useState('')
   const [activeTab, setActiveTab] = useState('overview')
+  const [socket, setSocket] = useState(null) // shared telemetry/chat socket
 
   useEffect(() => {
     // ask for token
@@ -28,21 +32,22 @@ export default function App() {
     setApiToken(token);
 
     // create socket connection with token
-    const socket = io({ auth: { token } });
+    const s = io({ auth: { token } });
+    setSocket(s);
 
-    socket.on('connect', () => {
+    s.on('connect', () => {
       pushLog('Connected to dashboard socket')
     })
 
-    socket.on('telemetry', (data) => {
+    s.on('telemetry', (data) => {
       setTelemetry(data)
     })
 
-    socket.on('chat', (msg) => pushLog(`CHAT: ${msg}`))
-    socket.on('botStatus', (s) => pushLog('Bot status update'))
-    socket.on('log', (msg) => pushLog(msg))
+    s.on('chat', (msg) => pushLog(`CHAT: ${msg}`))
+    s.on('botStatus', (s) => pushLog('Bot status update'))
+    s.on('log', (msg) => pushLog(msg))
 
-    return () => { socket.disconnect() }
+    return () => { s.disconnect() }
   }, [])
 
   function pushLog(text) {
@@ -64,6 +69,7 @@ export default function App() {
           <button className={`tab ${activeTab === 'overview' ? 'active' : ''}`} onClick={() => setActiveTab('overview')}>Overview</button>
           <button className={`tab ${activeTab === 'chat' ? 'active' : ''}`} onClick={() => setActiveTab('chat')}>Chat</button>
           <button className={`tab ${activeTab === 'tasks' ? 'active' : ''}`} onClick={() => setActiveTab('tasks')}>Tasks</button>
+          <button className={`tab ${activeTab === 'toggles' ? 'active' : ''}`} onClick={() => setActiveTab('toggles')}>Toggles</button>
           <button className={`tab ${activeTab === 'settings' ? 'active' : ''}`} onClick={() => setActiveTab('settings')}>Settings</button>
         </nav>
       </header>
@@ -75,12 +81,13 @@ export default function App() {
               <section className="left-col">
                 <StatsPanel telemetry={telemetry} />
                 <AIPanel telemetry={telemetry} />
-                <ControlPanel apiToken={apiToken} onLog={pushLog} />
+                <ControlPanel apiToken={apiToken} telemetry={telemetry} onLog={pushLog} />
               </section>
               <section className="right-col">
                 <MapView telemetry={telemetry} />
                 <InventoryPanel telemetry={telemetry} />
                 <PerformanceChart telemetry={telemetry} />
+                <LiveAIFeed telemetry={telemetry} />
               </section>
             </div>
             <aside className="event-log-section">
@@ -91,8 +98,13 @@ export default function App() {
 
         {activeTab === 'chat' && (
           <div className="tab-content">
-            <div className="full-width">
-              <AIChat apiToken={apiToken} onLog={pushLog} />
+            <div className="columns">
+              <div className="column">
+                <AIChat apiToken={apiToken} onLog={pushLog} />
+              </div>
+              <div className="column">
+                <BotChat socket={socket} />
+              </div>
             </div>
           </div>
         )}
@@ -100,7 +112,7 @@ export default function App() {
         {activeTab === 'tasks' && (
           <div className="tab-content">
             <div className="full-width">
-              <TasksPanel telemetry={telemetry} onLog={pushLog} />
+              <TasksPanel telemetry={telemetry} onLog={pushLog} apiToken={apiToken} />
             </div>
           </div>
         )}
@@ -109,6 +121,14 @@ export default function App() {
           <div className="tab-content">
             <div className="full-width">
               <SettingsPanel onLog={pushLog} />
+            </div>
+          </div>
+        )}
+
+        {activeTab === 'toggles' && (
+          <div className="tab-content">
+            <div className="full-width">
+              <TogglesPanel apiToken={apiToken} onLog={pushLog} />
             </div>
           </div>
         )}

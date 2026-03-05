@@ -6,10 +6,16 @@ export default class Mining {
     this.bot = bot;
     this.isMining = false;
     this.miningTarget = null;
+    this.enabled = true; // Default enabled
     logger.info('Mining system initialized');
   }
 
   async mineOres(oreType = 'iron', count = 5) {
+    if (!this.enabled) {
+      logger.debug('Mining is disabled');
+      return false;
+    }
+
     if (!this.bot) {
       logger.warn('Bot not available for mining');
       return false;
@@ -158,6 +164,84 @@ export default class Mining {
 
   isMiningActive() {
     return this.isMining;
+  }
+
+  async autoMine(oreType = 'iron_ore', tunnelLength = 20) {
+    if (!this.enabled) {
+      logger.debug('Mining is disabled');
+      return false;
+    }
+
+    if (!this.bot) {
+      logger.warn('Bot not available for auto-mining');
+      return false;
+    }
+
+    this.isMining = true;
+
+    try {
+      const botPos = this.bot.entity.position;
+      let minedCount = 0;
+      let blocksMined = 0;
+
+      logger.info(`Starting auto-mining for ${oreType}`, { tunnelLength });
+
+      // Dig a tunnel forward
+      const direction = this.bot.entity.yaw; // Facing direction
+      const dx = Math.sin(direction);
+      const dz = Math.cos(direction);
+
+      for (let step = 1; step <= tunnelLength && this.isMining; step++) {
+        const targetX = Math.round(botPos.x + dx * step);
+        const targetZ = Math.round(botPos.z + dz * step);
+
+        // Mine 3x3 tunnel section
+        for (let y = -1; y <= 1; y++) {
+          for (let x = -1; x <= 1; x++) {
+            for (let z = -1; z <= 1; z++) {
+              const block = this.bot.blockAt({
+                x: targetX + x,
+                y: Math.round(botPos.y) + y,
+                z: targetZ + z
+              });
+
+              if (block && block.name !== 'air' && block.name !== 'bedrock' && !this.isUnbreakable(block.name)) {
+                if (block.name.includes(oreType)) {
+                  minedCount++;
+                }
+
+                await this.mineBlock(block);
+                blocksMined++;
+                await this.sleep(200);
+              }
+            }
+          }
+        }
+
+        // Move forward
+        if (this.bot.pathfinder) {
+          const goal = new (require('mineflayer-pathfinder')).goals.GoalBlock(targetX, Math.round(botPos.y), targetZ);
+          this.bot.pathfinder.setGoal(goal, false);
+          await this.sleep(1000);
+        }
+
+        // Collect dropped items
+        await this.collectNearbyItems();
+      }
+
+      this.isMining = false;
+      logger.info('Auto-mining completed', { minedOres: minedCount, totalBlocks: blocksMined });
+      return { minedOres: minedCount, totalBlocks: blocksMined };
+    } catch (err) {
+      logger.error('Auto-mining error', { error: err.message });
+      this.isMining = false;
+      return false;
+    }
+  }
+
+  isUnbreakable(blockName) {
+    const unbreakable = ['bedrock', 'obsidian', 'barrier'];
+    return unbreakable.includes(blockName);
   }
 
   sleep(ms) {
